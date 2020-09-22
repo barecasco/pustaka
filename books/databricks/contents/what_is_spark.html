@@ -1,0 +1,408 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>What is Spark? · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.6.6">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="spark_history.html" />
+    
+    
+    <link rel="prev" href="setup.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Resume</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Cover
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="setup.html">
+            
+                <a href="setup.html">
+            
+                    
+                    Setup
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="setup.html">
+            
+                <a href="setup.html#sparkdown">
+            
+                    
+                    Spark Download
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="setup.html">
+            
+                <a href="setup.html#sparkwin">
+            
+                    
+                    Install Spark on Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="setup.html">
+            
+                <a href="setup.html#sparkshell">
+            
+                    
+                    Spark Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="setup.html">
+            
+                <a href="setup.html#sparkjup">
+            
+                    
+                    Using Spark in jupyter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="setup.html">
+            
+                <a href="setup.html#sparkalone">
+            
+                    
+                    Standalone Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="setup.html">
+            
+                <a href="setup.html#sparkshut">
+            
+                    
+                    Shutdown Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Contents</li>
+        
+        
+    
+        <li class="chapter active" data-level="2.1" data-path="what_is_spark.html">
+            
+                <a href="what_is_spark.html">
+            
+                    
+                    What is Spark?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="spark_history.html">
+            
+                <a href="spark_history.html">
+            
+                    
+                    History of Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="components.html">
+            
+                <a href="components.html">
+            
+                    
+                    The Components
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="components.html">
+            
+                <a href="components.html#sparkcore">
+            
+                    
+                    Spark Core
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="components.html">
+            
+                <a href="components.html#clustermanager">
+            
+                    
+                    Cluster Manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="components.html">
+            
+                <a href="components.html#storagelayer">
+            
+                    
+                    Storage Layer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="rdd_programming.html">
+            
+                <a href="rdd_programming.html">
+            
+                    
+                    Programming with RDDs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >What is Spark?</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="what-is-spark">What is Spark?</h1>
+<p>Spark is a cluster computing platform designed to be fast and general-purpose. It extends the popular <code>MapReduce</code> Model to efficiently support more types of computations, including interactive queries and stream processing.</p>
+<h5 id="fast"><em>Fast</em></h5>
+<p>Spark has the ability to run computations in memory while it is more efficient than <code>MapReduce</code> for complex applications running on disk.</p>
+<h5 id="general"><em>General</em></h5>
+<p>Spark is designed to cover a wide range of workloads that previously requireed separate distribute systems, including batch ap-plications, iterative algorithm (for ML), interactive queries and streaming.</p>
+<h5 id="unified"><em>Unified</em></h5>
+<p>component of Spark. Spark is designed to support a wide range of data analytics tasks, ranging from simple data loading and SQL queries to <a href="../GLOSSARY.html#machine" class="glossary-term" title="A machine consists of a certain number of nodes,
+each of which con-sists of a certain number of cores.">machine</a> learning and streaming computation, over the same engine and with a consistent set of APIs.</p>
+<h3 id="spark-for-data-scientist">Spark for Data Scientist</h3>
+<p>Data Scientist is somebody whose main task is to analyze and model data. DS have experience  with techniques necessary to transform data into formats that can be analyzed for insights (data wrangling).</p>
+<p>DS use their skills to analyze data with the goal of answering a question or discovering insights. Their workflow involve ad hoc analysis, so they use interactive shells (instead of building complex applications) that let them see results of queries and snippets of code in the least amount of time. Spark speed and simple API shine for this purpose, and its built in libraries mean that many algorithms are available out of the box.</p>
+<p>Spark supports the different tasks of data science with a number of components. The Spark shell makes it easy to do interactive data anal-ysis using Python. Spark SQL also has a separate SQL shell that can be used to do data exploration using SQL, or Spark SQL can be used as part of a regular Spark program or in the Spark shell. <a href="../GLOSSARY.html#machine" class="glossary-term" title="A machine consists of a certain number of nodes,
+each of which con-sists of a certain number of cores.">Machine</a> learning and data analysis is supoorted through the MLLib libraries. In addition, there is support for calling out to external programs in Matlab or R. Spark enables data scientists to tackle problems with larger data sizes than they could before with tools like R or Pandas.</p>
+<p>The work of a data scientist will be productized or extended, hardened and tuned to become a production data processing application, which itself is a component of a business application. For example, the initial investigation of a data scientist might lead to the creation of a produc-tion recommender system that is integrated into a web application and used to generate product suggestions to users. Often it is a different person or team that leads the process of productizing the work of the data scientists, and that person is often an engineer.</p>
+<h3 id="spark-for-data-processing-applications">Spark for Data Processing applications</h3>
+<p>We think of engineers as a large class of software developers who use Spark to build production data processing applications. These devel-opers usually have an understanding of the principles of software en-gineering, such as encapsulaion, interface design, and object-oriented programming. They frequently have a degree in computer science. They use their engineering skills to design and build software systems that implement a business use case.</p>
+<p>Spark provides a simple way to parallelize these applications across clusters, and hides the complexity of distributed systems program-ming, network communication, and fault tolerance. The system give them enough control to monitor, inspect, and tune applications while allowing them to implement common tasks quickly. The modular na-ture of the API makes it easy to factor work into reusable libraries and test it locally.</p>
+<p>Spark&#x2019;s users choose it to use for their data processing applications because it provides a wide variety of functionality, is easy to learn and use, and is mature and reliable.</p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="setup.html" class="navigation navigation-prev " aria-label="Previous page: Setup">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="spark_history.html" class="navigation navigation-next " aria-label="Next page: History of Spark">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"What is Spark?","level":"2.1","depth":1,"next":{"title":"History of Spark","level":"2.2","depth":1,"path":"contents/spark_history.md","ref":"contents/spark_history.md","articles":[]},"previous":{"title":"Setup","level":"1.2","depth":1,"path":"contents/setup.md","ref":"contents/setup.md","articles":[{"title":"Spark Download","level":"1.2.1","depth":2,"anchor":"#sparkdown","path":"contents/setup.md","ref":"contents/setup.md#sparkdown","articles":[]},{"title":"Install Spark on Windows","level":"1.2.2","depth":2,"anchor":"#sparkwin","path":"contents/setup.md","ref":"contents/setup.md#sparkwin","articles":[]},{"title":"Spark Shell","level":"1.2.3","depth":2,"anchor":"#sparkshell","path":"contents/setup.md","ref":"contents/setup.md#sparkshell","articles":[]},{"title":"Using Spark in jupyter","level":"1.2.4","depth":2,"anchor":"#sparkjup","path":"contents/setup.md","ref":"contents/setup.md#sparkjup","articles":[]},{"title":"Standalone Spark","level":"1.2.5","depth":2,"anchor":"#sparkalone","path":"contents/setup.md","ref":"contents/setup.md#sparkalone","articles":[]},{"title":"Shutdown Spark","level":"1.2.6","depth":2,"anchor":"#sparkshut","path":"contents/setup.md","ref":"contents/setup.md#sparkshut","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex","-lunr","-search"],"pluginsConfig":{"katex":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Lora","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":true},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"contents/what_is_spark.md","mtime":"2020-09-20T06:08:57.365Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-21T14:51:56.982Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

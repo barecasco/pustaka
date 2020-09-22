@@ -1,0 +1,410 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Programming with RDDs · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.6.6">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="components.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Resume</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Cover
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="setup.html">
+            
+                <a href="setup.html">
+            
+                    
+                    Setup
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="setup.html">
+            
+                <a href="setup.html#sparkdown">
+            
+                    
+                    Spark Download
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="setup.html">
+            
+                <a href="setup.html#sparkwin">
+            
+                    
+                    Install Spark on Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="setup.html">
+            
+                <a href="setup.html#sparkshell">
+            
+                    
+                    Spark Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="setup.html">
+            
+                <a href="setup.html#sparkjup">
+            
+                    
+                    Using Spark in jupyter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="setup.html">
+            
+                <a href="setup.html#sparkalone">
+            
+                    
+                    Standalone Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="setup.html">
+            
+                <a href="setup.html#sparkshut">
+            
+                    
+                    Shutdown Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Contents</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="what_is_spark.html">
+            
+                <a href="what_is_spark.html">
+            
+                    
+                    What is Spark?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="spark_history.html">
+            
+                <a href="spark_history.html">
+            
+                    
+                    History of Spark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="components.html">
+            
+                <a href="components.html">
+            
+                    
+                    The Components
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="components.html">
+            
+                <a href="components.html#sparkcore">
+            
+                    
+                    Spark Core
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="components.html">
+            
+                <a href="components.html#clustermanager">
+            
+                    
+                    Cluster Manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="components.html">
+            
+                <a href="components.html#storagelayer">
+            
+                    
+                    Storage Layer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.4" data-path="rdd_programming.html">
+            
+                <a href="rdd_programming.html">
+            
+                    
+                    Programming with RDDs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Programming with RDDs</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="programming-with-rdds">Programming with RDDs</h1>
+<p>An <a href="../GLOSSARY.html#rdd" class="glossary-term" title="Represents a collection of items distributed across many compute nodes that can be manipulated in parallel. Spark Core provides many APIs for building and manipulating these collections.">RDD</a> in Spark is simply an immutable distributed collection of objects. Each <a href="../GLOSSARY.html#rdd" class="glossary-term" title="Represents a collection of items distributed across many compute nodes that can be manipulated in parallel. Spark Core provides many APIs for building and manipulating these collections.">RDD</a> is split into multiple partitions, which may be computed on different nodes of the cluster.</p>
+<p>Once created, <a href="../GLOSSARY.html#rdd" class="glossary-term" title="Represents a collection of items distributed across many compute nodes that can be manipulated in parallel. Spark Core provides many APIs for building and manipulating these collections.">RDD</a> offer two types of operations: transformations and actions. Transformations construct a new <a href="../GLOSSARY.html#rdd" class="glossary-term" title="Represents a collection of items distributed across many compute nodes that can be manipulated in parallel. Spark Core provides many APIs for building and manipulating these collections.">RDD</a> from a previous one. For example, one common  transformation is filtering data that matches a predicate. In our text file example, we can use this to create a new <a href="../GLOSSARY.html#rdd" class="glossary-term" title="Represents a collection of items distributed across many compute nodes that can be manipulated in parallel. Spark Core provides many APIs for building and manipulating these collections.">RDD</a> holding just the strings that contain the word &#x2018;Python&#x2019;.</p>
+<p>Actions, on the other hand, compute a result based on an <a href="../GLOSSARY.html#rdd" class="glossary-term" title="Represents a collection of items distributed across many compute nodes that can be manipulated in parallel. Spark Core provides many APIs for building and manipulating these collections.">RDD</a>, and either return it to the driver program or save it to an external storage system (e.g. HDFS). One example of an action we called earlier is first(), which returns the first element in an <a href="../GLOSSARY.html#rdd" class="glossary-term" title="Represents a collection of items distributed across many compute nodes that can be manipulated in parallel. Spark Core provides many APIs for building and manipulating these collections.">RDD</a>.</p>
+<p>If you are ever confused whether a given function is a transformation or an action, you can look at its return type: transformations returns RDDs, whereas actions return some other data type.
+Transformations and actions are different because of the way Spark compute RDDs. Although you can define new RDDs any time, Spark compute them only in a lazy, fashion &#x2013; that is the first time they are used in an action. This approach might seem unusual at first, but makes a lot of sense when you are working with Big Data. For instance, where we defined a text file and then filtered the lines that include &#x2018;Python&#x2019;.  If Spark were to load and store all the lines in the file as soon as we wrote the command, it would waste a lot of storage space, given that we then immediately filter out many lines. Instead, once Spark sees the whole chain of transformations, it can compute just the data needed for its result. In fact, for the first() action, Spark scans the file only untul it finds the first matching line; it doesn&#x2019;t even read the whole file.</p>
+<p>Finally, Spark&#x2019;s RDDs are by default recomputed each time you run an action on them. If you would like to reuse an <a href="../GLOSSARY.html#rdd" class="glossary-term" title="Represents a collection of items distributed across many compute nodes that can be manipulated in parallel. Spark Core provides many APIs for building and manipulating these collections.">RDD</a> in multiple actions, you can ask Spark to persist it in using <code>RDD.persist()</code>. We can ask Spark to persist our data in a number of different places.  After computing it the first time, Spark will store the <a href="../GLOSSARY.html#rdd" class="glossary-term" title="Represents a collection of items distributed across many compute nodes that can be manipulated in parallel. Spark Core provides many APIs for building and manipulating these collections.">RDD</a> contents in memory partitioned accross the machines in your cluster), and reuse them in future actions. Persisting RDDs on disk instead of memory is also possi-ble. The behavior of not persisting by default might again seem unusual, but it makes a lot of sense for big datasets. If you will not reuse the <a href="../GLOSSARY.html#rdd" class="glossary-term" title="Represents a collection of items distributed across many compute nodes that can be manipulated in parallel. Spark Core provides many APIs for building and manipulating these collections.">RDD</a>, there is no reason to waste storage space when Spark could in-stead stream through the data once and just compute the result.</p>
+<p>In practice, you will often use persist to load a subset of your data into memory and query it repeatedly. For example, if we knew that we wanted to compute multiple results about the README lines that con-tain Python, we could write the script below:</p>
+<pre><code>&gt;&gt;&gt; pythonLines.persist
+&gt;&gt;&gt; pythonLines.count()
+2
+&gt;&gt;&gt; pythonLInes .first()
+&#x2018;Interactive python shells&#x2019;
+</code></pre><p>Every Spark program and shell session will work as follows:</p>
+<ol>
+<li>Create some input RDDs from external data.</li>
+<li>Transform them to define new RDDs using transformations like filter()</li>
+<li>Ask Spark to persist any intermediate RDDs that will need to be reused.</li>
+<li>Launch actions such as count and first to kick off a parallel computation, which is then optimized and executed by Spark.</li>
+</ol>
+<h2 id="creating-rdds">Creating RDDs</h2>
+<p>Spark provides two ways to create RDDs:</p>
+<ol>
+<li>Loading an external dataset</li>
+<li>Parallelizing a collection in your driver program.
+The simplest way to create RDDs is to take an existing collection in your program and pass it to <code>SparkContext.parallelize</code> method.</li>
+</ol>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="components.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: The Components">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Programming with RDDs","level":"2.4","depth":1,"previous":{"title":"The Components","level":"2.3","depth":1,"path":"contents/components.md","ref":"contents/components.md","articles":[{"title":"Spark Core","level":"2.3.1","depth":2,"anchor":"#sparkcore","path":"contents/components.md","ref":"contents/components.md#sparkcore","articles":[]},{"title":"Cluster Manager","level":"2.3.2","depth":2,"anchor":"#clustermanager","path":"contents/components.md","ref":"contents/components.md#clustermanager","articles":[]},{"title":"Storage Layer","level":"2.3.3","depth":2,"anchor":"#storagelayer","path":"contents/components.md","ref":"contents/components.md#storagelayer","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex","-lunr","-search"],"pluginsConfig":{"katex":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Lora","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":true},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"contents/rdd_programming.md","mtime":"2020-09-20T13:30:02.267Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-21T14:51:56.982Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
