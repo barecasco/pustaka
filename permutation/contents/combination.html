@@ -1,0 +1,317 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Deriving Combination · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.6.6">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="permutation.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Cover
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Contents</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="permutation.html">
+            
+                <a href="permutation.html">
+            
+                    
+                    Deriving Permutation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="combination.html">
+            
+                <a href="combination.html">
+            
+                    
+                    Deriving Combination
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Deriving Combination</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="i--combination-formula-derivation">I.  Combination Formula Derivation</h2>
+<h3 id="combination-inquire-1">Combination: Inquire (1)</h3>
+<ul>
+<li><p>Now we have a new kind of set. The set of 6 Infinity Stones: {space, time, mind, power, soul, reality}.</p>
+</li>
+<li><p>These stones are spread across the universe. As ambitious as you might be, you just want to obtain any 3 of them.</p>
+</li>
+<li><p>If you want to obtain any 3 of the 6 stones, it means you don&apos;t care which stones you get and the order of getting them.</p>
+</li>
+<li><p>Now, you don&apos;t want to create a sequence of 3 stones. You want a <strong>set</strong> of 3 stones.</p>
+</li>
+<li><p>How many possibilities of set that you can obtain? Let us use our raw brain power to see the possibilities.</p>
+</li>
+</ul>
+<h3 id="combination-inquire-2">Combination: Inquire (2)</h3>
+<p>To compute the possible sets, you have to make sure that no two or more sets are &quot;clones&quot;. Ex: {space, time, mind} and {time, space, mind} ARE clones to each other because the order of the members of a set can be arbitrary.</p>
+<h3 id="combination-inquire-3">Combination: Inquire (3)</h3>
+<ul>
+<li>There are only 20 unique sets possible!</li>
+<li>We just did what is called finding <strong>combination</strong> of 3 from 6 Infinity Stones.</li>
+<li><p>If you ask why the word &quot;combination&quot;, change the Infinity Stones set to ice cream toppings and see if the word makes sense to you.</p>
+</li>
+<li><p>How many possible sets if you want all of the 6 stones? One :)</p>
+</li>
+</ul>
+<h3 id="combination-deriving-the-formula-1">Combination: Deriving the Formula (1)</h3>
+<ul>
+<li>The 20 possible sets are also the members of the permutation sequences <script type="math/tex; ">P(6,3)=120</script> of the Stones.</li>
+<li>The idea is how to get rid of other members in the permutation sequences so only the 20 sequences that represent the combination remain.</li>
+</ul>
+<h3 id="combination-deriving-the-formula-2">Combination: Deriving the Formula (2)</h3>
+<ul>
+<li>Assume all of the <script type="math/tex; ">120</script> permutation sequences are sets. Now we have <script type="math/tex; ">120</script> sets, where each set has 3 members.</li>
+<li>Each set has permutation of <script type="math/tex; ">P(3,3)=6</script> sequences that are also members of the 120 sets we have.</li>
+<li>This 6 sequences differs only in order, which makes them clones if they are assumed as sets. Let us call this 6 sets a clone group.</li>
+<li>Our 120 sets consist of clone groups, where each group consists of 6 sets. That means we have <script type="math/tex; ">120/6=20</script> clone groups.</li>
+<li>If we merge every clone group as only 1 set, now we have 20 unique sets.</li>
+</ul>
+<h3 id="combination-deriving-the-formula-3">Combination: Deriving the Formula (3)</h3>
+<ul>
+<li>Start by calculating the number of permutation sequences from the set:</li>
+</ul>
+<p><script type="math/tex; mode=display">
+P(n, k)=\frac{n!}{(n-k)!}
+</script></p>
+<ul>
+<li>Based on the previous slide, the combination number <script type="math/tex; ">C(n,k)</script> is calculated by dividing the permutation number <script type="math/tex; ">P(n,k)</script> by the permutation number of the members of the picked set, <script type="math/tex; ">k!</script>.</li>
+</ul>
+<p><script type="math/tex; mode=display">
+\boxed{
+    \begin{aligned}
+    \\ ~~~~ C(n, k)=\,\frac{n!}{k!(n-k)!} ~~~~ \\\\
+    \end{aligned}
+}
+</script></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="permutation.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Deriving Permutation">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Deriving Combination","level":"2.2","depth":1,"previous":{"title":"Deriving Permutation","level":"2.1","depth":1,"path":"contents/permutation.md","ref":"contents/permutation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"contents/combination.md","mtime":"2020-09-23T08:49:54.630Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-23T13:12:38.714Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

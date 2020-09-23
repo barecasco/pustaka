@@ -1,0 +1,341 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Deriving Permutation · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.6.6">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="combination.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Cover
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Contents</li>
+        
+        
+    
+        <li class="chapter active" data-level="2.1" data-path="permutation.html">
+            
+                <a href="permutation.html">
+            
+                    
+                    Deriving Permutation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="combination.html">
+            
+                <a href="combination.html">
+            
+                    
+                    Deriving Combination
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Deriving Permutation</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="i--permutation-formula-derivation">I.  Permutation Formula Derivation</h2>
+<h3 id="permutation-inquire-1">Permutation: Inquire (1)</h3>
+<ul>
+<li><p>Let {a, b, c, d, e} a set of 5 letters that you want to play with.</p>
+</li>
+<li><p>You can create a sequence of 5 letters by taking out the letters blindfolded one by one e.g. [b, c, d, a, e].</p>
+</li>
+<li><p>How many sequences you can create? The order of the letters of course matters! the sequence [e, d, c, b, a] is different from [a, b, c, d, e].</p>
+</li>
+<li><p>Set up an imaginary jar containing the letters. You are going to pick the letters one by one.</p>
+</li>
+</ul>
+<h3 id="permutation-inquire-2">Permutation: Inquire (2)</h3>
+<ul>
+<li><p>Pick the first letter from the jar. Can you guess the letter you will get? No. But you can tell there are 5 possibilities: &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot; or &quot;e&quot;.</p>
+</li>
+<li><p>What are the possibilities of the second letter? It depends on the first letter you get! If you get &quot;c&quot; for the first, the second will be &quot;a&quot;, &quot;b&quot;, &quot;d&quot;, or &quot;e&quot;.</p>
+</li>
+<li><p>Whichever letter you get in the first pick, the number of possibilities of the second pick is always 4.</p>
+</li>
+<li><p>The number of the possibilities of the third, the fourth and the fifth pick is 3, 2, and 1 respectively.</p>
+</li>
+</ul>
+<h3 id="permutation-calculating-possible-outcomes">Permutation: Calculating Possible Outcomes</h3>
+<ul>
+<li><p>In the first pick, you have 5 possibilities.</p>
+</li>
+<li><p>In the second pick, you have 4 possibilities for each possibility from the first pick. Up to two picks, you can say there are <script type="math/tex; ">5 \times 4 = 20</script> different outcomes exist: [&quot;a&quot;, &quot;b&quot;], [&quot;a&quot;, &quot;c&quot;], [&quot;a&quot;, &quot;d&quot;], [&quot;a&quot;, &quot;e&quot;], [&quot;b&quot;, &quot;a&quot;], [&quot;b&quot;, &quot;c&quot;] ....</p>
+</li>
+<li><p>The third pick has 3 possibilities for each outcome of the second pick. This gives <script type="math/tex; ">5 \times 4 \times 3=60</script> different outcomes in three picks.</p>
+</li>
+<li><p>Now we can calculate the total outcomes of five picks: <script type="math/tex; ">5 \times 4 \times 3 \times 2 \times 1 = 120</script> different outcomes.</p>
+</li>
+</ul>
+<h3 id="permutation-deriving-the-formula-1">Permutation: Deriving the Formula (1)</h3>
+<p>Let <script type="math/tex; ">n!=n\times(n-1)\times(n-2)\times ... \times1</script>, with <script type="math/tex; ">0!=1</script>. The number possibilities of our first case above is <script type="math/tex; ">5!=120</script>.</p>
+<h3 id="permutation-deriving-the-formula-2">Permutation: Deriving the Formula (2)</h3>
+<ul>
+<li><p>To blindfoldedly picks <script type="math/tex; ">n</script> letters from <script type="math/tex; ">n</script>-letters set to create a sequence is called <strong>permutation</strong> of <script type="math/tex; ">n</script> letters.</p>
+</li>
+<li><p>The permutation of <script type="math/tex; ">n</script>-letters set has <script type="math/tex; ">n!</script> different outcomes.</p>
+</li>
+<li><p>What if we want to permute only <script type="math/tex; ">k</script> letters from the <script type="math/tex; ">n</script>-letters set? <script type="math/tex; ">(k<n)</script></p>
+</li>
+<li><p>Let us call the number of the possibilities from the permutation as <script type="math/tex; ">P(n, k)</script>.</p>
+</li>
+</ul>
+<h3 id="permutation-deriving-the-formula-3">Permutation: Deriving the Formula (3)</h3>
+<ul>
+<li><p>Permutation of <script type="math/tex; ">k</script> letters from the <script type="math/tex; ">n</script>-letters set is the same as our first example except that the picking stops at the <script type="math/tex; ">k</script>-th pick. Ex: if <script type="math/tex; ">k=3</script> and <script type="math/tex; ">n=7</script> then <script type="math/tex; ">P(7,3)=7\times6\times5=210</script> possibilities.</p>
+</li>
+<li><p>We can formulate: <script type="math/tex; ">P(n,k)=n\times(n-1)\times(n-2)\times ... \times (n-k+1)</script></p>
+</li>
+<li><p>And let
+<script type="math/tex; ">n! = n\times(n-1)\times(n-2)\times ... \times(n-k+1) \times(n-k)\times ... \times1</script></p>
+</li>
+<li><p>The idea is to get <script type="math/tex; ">P(n,k)</script> from <script type="math/tex; ">n!</script> above.</p>
+</li>
+</ul>
+<h3 id="permutation-deriving-the-formula-4">Permutation: Deriving the Formula (4)</h3>
+<p><script type="math/tex; mode=display">
+\begin{equation*}
+n! =\, \underbrace{n\times(n-1)\times(n-2)\times \dots\times(n-k+1)}_{P(n, k)} \times
+\overbrace{(n-k)\times\dots\times1}^{(n-k)!}
+\end{equation*}
+</script></p>
+<p><script type="math/tex; mode=display">
+    \boxed{
+        \begin{aligned}
+        \\ ~~~~ P(n, k)=\frac{n!}{(n-k)!} ~~~~ \\\\
+        \end{aligned}
+    }
+</script></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Cover">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="combination.html" class="navigation navigation-next " aria-label="Next page: Deriving Combination">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Deriving Permutation","level":"2.1","depth":1,"next":{"title":"Deriving Combination","level":"2.2","depth":1,"path":"contents/combination.md","ref":"contents/combination.md","articles":[]},"previous":{"title":"Cover","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"contents/permutation.md","mtime":"2020-09-23T08:51:22.683Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-23T13:12:38.714Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

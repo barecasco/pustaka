@@ -2,7 +2,7 @@
 
 ## Math
 
-The source page mentioned that you can use MathJax or Katex to add math rendering capability to HonKit. But I am having issue on MathJax installation. It could be versioning problem of `npm`. Now I use Katex and it works.
+The source page mentioned that you can use MathJax or Katex to add math rendering capability to HonKit. I had issues on MathJax installation and turned out it was versioning problem of the dependencies.
 
 To install Katex for HonKit, do:
 
@@ -16,8 +16,18 @@ docs@1.0.0 D:\STORAGE\honkit
 `-- katex@0.12.0
 ```
 
-and write math fenced with \$\$ sign. Example:  
+Installing MathJax uses `gitbook-plugin-mathjax`. But the version of the packages must be correct.
 
-$$
-F=ma
-$$
+```
+D:\storage\honkit> npm list -depth=0
+docs@1.0.0 D:\STORAGE\honkit
++-- gitbook-plugin-mathjax@1.1.2
++-- honkit@3.6.6
+`-- mathjax@2.7.9
+```
+
+To install a package with specific version use:
+
+```
+npm install mathjax@2.7.9
+```

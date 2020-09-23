@@ -17,11 +17,11 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
                 
             
                 
@@ -68,6 +68,10 @@
     <div class="book-summary">
         
             
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
             
                 <nav role="navigation">
                 
@@ -339,6 +343,9 @@
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
                             
+<div id="book-search-results">
+    <div class="search-noresults">
+    
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="programming-with-rdds">Programming with RDDs</h1>
@@ -372,6 +379,22 @@ The simplest way to create RDDs is to take an existing collection in your progra
                                 
                                 </section>
                             
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
                         </div>
                     </div>
                 
@@ -391,7 +414,7 @@ The simplest way to create RDDs is to take an existing collection in your progra
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Programming with RDDs","level":"2.4","depth":1,"previous":{"title":"The Components","level":"2.3","depth":1,"path":"contents/components.md","ref":"contents/components.md","articles":[{"title":"Spark Core","level":"2.3.1","depth":2,"anchor":"#sparkcore","path":"contents/components.md","ref":"contents/components.md#sparkcore","articles":[]},{"title":"Cluster Manager","level":"2.3.2","depth":2,"anchor":"#clustermanager","path":"contents/components.md","ref":"contents/components.md#clustermanager","articles":[]},{"title":"Storage Layer","level":"2.3.3","depth":2,"anchor":"#storagelayer","path":"contents/components.md","ref":"contents/components.md#storagelayer","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex","-lunr","-search"],"pluginsConfig":{"katex":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Lora","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":true},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"contents/rdd_programming.md","mtime":"2020-09-20T13:30:02.267Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-21T14:51:56.982Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Programming with RDDs","level":"2.4","depth":1,"previous":{"title":"The Components","level":"2.3","depth":1,"path":"contents/components.md","ref":"contents/components.md","articles":[{"title":"Spark Core","level":"2.3.1","depth":2,"anchor":"#sparkcore","path":"contents/components.md","ref":"contents/components.md#sparkcore","articles":[]},{"title":"Cluster Manager","level":"2.3.2","depth":2,"anchor":"#clustermanager","path":"contents/components.md","ref":"contents/components.md#clustermanager","articles":[]},{"title":"Storage Layer","level":"2.3.3","depth":2,"anchor":"#storagelayer","path":"contents/components.md","ref":"contents/components.md#storagelayer","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"contents/rdd_programming.md","mtime":"2020-09-20T13:30:02.267Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-23T13:08:09.423Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -399,6 +422,30 @@ The simplest way to create RDDs is to take an existing collection in your progra
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>

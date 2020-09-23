@@ -1,4 +1,4 @@
-# Editing Style ala Agra
+# Edit Style
 
 #### Font Families
 We need to change 3 font families. Two fonts used for serif and sans, one font used for code. To change the serif and sans, set below parameter at file:
@@ -9,7 +9,6 @@ We need to change 3 font families. Two fonts used for serif and sans, one font u
 ...
 .book.font-size-2 .book-body .page-inner section {
   font-size: 1.8rem;
-  max-width:72rem;
 }
 .book.font-size-3 .book-body .page-inner section {
   font-size: 2.1rem;
@@ -25,15 +24,15 @@ We need to change 3 font families. Two fonts used for serif and sans, one font u
 
 To change font for the code, go to:
 
-`node_modules\gitbook-plugin-fontsettings\assets\website.css`
+`node_modules\@honkit\honkit-plugin-theme-default\_assets\website\style.css`
 
 and find the line that contains `markdown-section pre{font-family:` and `Menlo`. Add new font "Roboto Mono" at the front of the list:
 
 ```
-.markdown-section pre{font-family:"Roboto Mono",...;line-height:2rem;}
+.markdown-section pre{font-family:"Roboto Mono",...;line-height:1.3em;}
 ```
 
-oh, and add the line-height parameter too, use 2rem so the code lines are not separated too far.
+Oh, and add the line-height parameter too, use 1.3em so the code lines are not separated too far for each font size.
 
 To make the fonts available for other users, currently we are finding a way to add google fonts to the index.html file at _book. The line that should be added is:
 
