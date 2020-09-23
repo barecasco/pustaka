@@ -17,11 +17,11 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
                 
             
                 
@@ -68,6 +68,10 @@
     <div class="book-summary">
         
             
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
             
                 <nav role="navigation">
                 
@@ -197,11 +201,14 @@
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
                             
+<div id="book-search-results">
+    <div class="search-noresults">
+    
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="additional-honkit-module">Additional HonKit module</h1>
 <h2 id="math">Math</h2>
-<p>The source page mentioned that you can use MathJax or Katex to add math rendering capability to HonKit. But I am having issue on MathJax installation. It could be versioning problem of <code>npm</code>. Now I use Katex and it works.</p>
+<p>The source page mentioned that you can use MathJax or Katex to add math rendering capability to HonKit. I had issues on MathJax installation and turned out it was versioning problem of the dependencies.</p>
 <p>To install Katex for HonKit, do:</p>
 <pre><code>D:\storage\honkit&gt; npm install Katex
 D:\storage\honkit&gt; npm install gitbook-plugin-Katex
@@ -210,14 +217,34 @@ docs@1.0.0 D:\STORAGE\honkit
 +-- gitbook-plugin-katex@1.1.4
 +-- honkit@3.6.6
 `-- katex@0.12.0
-</code></pre><p>and write math fenced with $$ sign. Example:  </p>
-<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mo>=</mo><mi>m</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">
-F=ma
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">F</span><span class="mrel">=</span><span class="mord mathit">m</span><span class="mord mathit">a</span></span></span></span></span></p>
-
+</code></pre><p>Installing MathJax uses <code>gitbook-plugin-mathjax</code>. But the version of the packages must be correct.</p>
+<pre><code>D:\storage\honkit&gt; npm list -depth=0
+docs@1.0.0 D:\STORAGE\honkit
++-- gitbook-plugin-mathjax@1.1.2
++-- honkit@3.6.6
+`-- mathjax@2.7.9
+</code></pre><p>To install a package with specific version use:</p>
+<pre><code>npm install mathjax@2.7.9
+</code></pre>
                                 
                                 </section>
                             
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
                         </div>
                     </div>
                 
@@ -237,7 +264,7 @@ F=ma
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Add HonKit Package","level":"2.3","depth":1,"previous":{"title":"Debug","level":"2.2","depth":1,"path":"contents/debug.md","ref":"contents/debug.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex","-lunr","-search"],"pluginsConfig":{"katex":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Lora","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":true},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"contents/package.md","mtime":"2020-09-20T14:57:15.243Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T04:01:20.831Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Add HonKit Package","level":"2.3","depth":1,"previous":{"title":"Debug","level":"2.2","depth":1,"path":"contents/debug.md","ref":"contents/debug.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"contents/package.md","mtime":"2020-09-23T12:37:36.487Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-23T12:53:28.415Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -245,6 +272,30 @@ F=ma
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>

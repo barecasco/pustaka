@@ -8,7 +8,7 @@ Spark has the ability to run computations in memory while it is more efficient t
 Spark is designed to cover a wide range of workloads that previously requireed separate distribute systems, including batch ap-plications, iterative algorithm (for ML), interactive queries and streaming.
 
 #####*Unified*
-component of Spark. Spark is designed to support a wide range of data analytics tasks, ranging from simple data loading and SQL queries to machine learning and streaming computation, over the same engine and with a consistent set of APIs.
+Spark is designed to support a wide range of data analytics tasks, ranging from simple data loading and SQL queries to machine learning and streaming computation, over the same engine and with a consistent set of APIs.
 
 ### Spark for Data Scientist
 

@@ -15,6 +15,8 @@ The search bar and the backend engine `lunr` are disabled in `book.json`.
 }
 ```
 
+**Update**. After executing below hack to remove error message, the search bar works again.
+
 ##### `split` Method of undefined on GLOSSARY Page
 
 When clicking a GLOSSARY word, an error of accesing `split` method of `undefined` is thrown. The page works normal, so I just normalize the responsible function at:

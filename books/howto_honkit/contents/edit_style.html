@@ -17,11 +17,11 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
                 
             
                 
@@ -70,6 +70,10 @@
     <div class="book-summary">
         
             
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
             
                 <nav role="navigation">
                 
@@ -199,16 +203,18 @@
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
                             
+<div id="book-search-results">
+    <div class="search-noresults">
+    
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="editing-style-ala-agra">Editing Style ala Agra</h1>
+                                <h1 id="edit-style">Edit Style</h1>
 <h4 id="font-families">Font Families</h4>
 <p>We need to change 3 font families. Two fonts used for serif and sans, one font used for code. To change the serif and sans, set below parameter at file:</p>
 <p><code>node_modules\gitbook-plugin-fontsettings\assets\website.css</code></p>
 <pre><code>...
 .book.font-size-2 .book-body .page-inner section {
   font-size: 1.8rem;
-  max-width:72rem;
 }
 .book.font-size-3 .book-body .page-inner section {
   font-size: 2.1rem;
@@ -221,10 +227,10 @@
   font-family: &quot;Raleway&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
 }
 </code></pre><p>To change font for the code, go to:</p>
-<p><code>node_modules\gitbook-plugin-fontsettings\assets\website.css</code></p>
+<p><code>node_modules\@honkit\honkit-plugin-theme-default\_assets\website\style.css</code></p>
 <p>and find the line that contains <code>markdown-section pre{font-family:</code> and <code>Menlo</code>. Add new font &quot;Roboto Mono&quot; at the front of the list:</p>
-<pre><code>.markdown-section pre{font-family:&quot;Roboto Mono&quot;,...;line-height:2rem;}
-</code></pre><p>oh, and add the line-height parameter too, use 2rem so the code lines are not separated too far.</p>
+<pre><code>.markdown-section pre{font-family:&quot;Roboto Mono&quot;,...;line-height:1.3em;}
+</code></pre><p>Oh, and add the line-height parameter too, use 1.3em so the code lines are not separated too far for each font size.</p>
 <p>To make the fonts available for other users, currently we are finding a way to add google fonts to the index.html file at _book. The line that should be added is:</p>
 <pre><code>&lt;link rel=&quot;stylesheet&quot;
       href=&quot;https://fonts.googleapis.com/css2?family=Lora&amp;family=Raleway&amp;family=Roboto+Mono&quot;&gt;
@@ -252,6 +258,22 @@
                                 
                                 </section>
                             
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
                         </div>
                     </div>
                 
@@ -275,7 +297,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Edit Style","level":"2.1","depth":1,"next":{"title":"Debug","level":"2.2","depth":1,"path":"contents/debug.md","ref":"contents/debug.md","articles":[]},"previous":{"title":"Setup","level":"1.2","depth":1,"path":"contents/setup.md","ref":"contents/setup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex","-lunr","-search"],"pluginsConfig":{"katex":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Lora","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":true},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"contents/edit_style.md","mtime":"2020-09-21T11:22:03.741Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T04:01:20.831Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Edit Style","level":"2.1","depth":1,"next":{"title":"Debug","level":"2.2","depth":1,"path":"contents/debug.md","ref":"contents/debug.md","articles":[]},"previous":{"title":"Setup","level":"1.2","depth":1,"path":"contents/setup.md","ref":"contents/setup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"contents/edit_style.md","mtime":"2020-09-23T12:53:20.533Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-23T12:53:28.415Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -283,6 +305,30 @@
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>

@@ -7,7 +7,7 @@ insertCss = '<link rel="stylesheet"\
 # get current folder name
 dirpath = os.getcwd()
 foldername = os.path.basename(dirpath)
-bookname = foldername + "_build"
+bookname = foldername
 
 # build the book
 os.system('cmd /c "npx honkit build"')
